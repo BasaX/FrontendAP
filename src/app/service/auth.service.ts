@@ -9,7 +9,8 @@ import { JwtDto } from '../model/jwt-dto';
   providedIn: 'root',
 })
 export class AuthService {
-  authURL = 'http://localhost:8080/auth/';
+  //authURL = 'http://localhost:8080/auth/';
+  authURL = 'backendbcd-basax.koyeb.app/auth/';
 
   constructor(private httpClient: HttpClient) {}
 
