@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logoAP {
+  width: 150px;
+}
+
+.redes {
+  margin-right: 1rem;
+  display: flex;
+  gap: 20px;
+}
+
+.iconos {
+  display: flex;
+  gap: 20px;
+}
+
+img {
+  width: 50px;
+}
+
+.btn {
+  border-width: medium;
+}
+
+@media (max-width: 575px) {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    height: 200px;
+  }
+
+  .redes {
+    gap: 10px;
+  }
+}
