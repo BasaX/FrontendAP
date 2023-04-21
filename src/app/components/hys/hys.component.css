@@ -2,3 +2,20 @@
   padding: 20px;
   background-color: #bed1e4;
 }
+
+.section {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+button {
+  height: 40px;
+}
+
+.circulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
