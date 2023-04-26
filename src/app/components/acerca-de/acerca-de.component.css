@@ -9,12 +9,25 @@ div {
 
 @media (min-width: 576px) {
   #fotoPerfil {
-    position: absolute;
-    width: 15%;
     border-radius: 100%;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
-    left: 3%;
-    top: 530px;
+  }
+
+  .datos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .descripcion {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    border-left: solid 1px rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -27,9 +40,21 @@ div {
     left: 33%;
     top: 700px;
   }
+
+  #nombre {
+    margin-top: 20px;
+  }
+
+  .botonEdicion {
+    display: flex;
+  }
 }
 
 #nombre {
   font-weight: bold;
-  margin-top: 30%;
+  font-size: 26px;
+}
+
+#titulo {
+  font-size: 18px;
 }
