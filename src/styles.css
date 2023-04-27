@@ -1,6 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
 .groupContainer {
-  padding-left: 5rem;
-  padding-right: 5rem;
   background-image: url("../src/assets/mikhail-selnihin-full-day-out-light-x4.jpg");
+}
+
+@media (min-width: 576px) {
+  .groupContainer {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .groupContainer {
+    padding: 0;
+  }
 }
