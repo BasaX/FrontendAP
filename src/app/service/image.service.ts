@@ -15,29 +15,27 @@ export class ImageService {
 
   constructor(private storage: Storage) {}
 
-  public uploadImage($event: any, name: string) {
+  public uploadImageById($event: any, name: string) {
     const file = $event.target.files[0];
     const imgRef = ref(this.storage, `imagen/` + name);
 
     uploadBytes(imgRef, file)
       .then((response) => {
-        this.getImage();
+        this.getImageById(name);
       })
       .catch((err) => {
         console.log(err);
       });
   }
 
-  getImage() {
+  getImageById(name: string) {
     const imagesRef = ref(this.storage, `imagen`);
-    list(imagesRef)
-      .then(async (response) => {
-        for (let item of response.items) {
+    list(imagesRef).then(async (response) => {
+      for (let item of response.items) {
+        if (item.name === name) {
           this.url = await getDownloadURL(item);
         }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+      }
+    });
   }
 }

@@ -1,25 +1,27 @@
-<div class="botonEdicion">
-  <button class="btn btn-dark" routerLink="/editacercade/1" *ngIf="isLogged">
-    <i class="bi bi-pencil-square"></i> Editar Persona
-  </button>
-</div>
-<div class="row">
-  <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-    <img
-      src="{{ persona.img }}"
-      alt="fotoPerfil"
-      class="img-fluid"
-      id="fotoPerfil"
-    />
+<div class="group">
+  <div class="botonEdicion">
+    <button class="btn btn-dark" routerLink="/editacercade/1" *ngIf="isLogged">
+      <i class="bi bi-pencil-square"></i> Editar Persona
+    </button>
   </div>
-  <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 datos">
-    <p id="nombre">{{ persona.nombre }} {{ persona.apellido }}</p>
-    <p id="titulo">Full Stack Developer Jr</p>
-  </div>
-  <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 descripcion">
-    <h1>Acerca de mi</h1>
-    <p>
-      {{ persona.descripcion }}
-    </p>
+  <div class="row">
+    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+      <img
+        src="{{ persona.img }}"
+        alt="fotoPerfil"
+        class="img-fluid"
+        id="fotoPerfil"
+      />
+    </div>
+    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 datos">
+      <p id="nombre">{{ persona.nombre }} {{ persona.apellido }}</p>
+      <p id="titulo">Full Stack Developer Jr</p>
+    </div>
+    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 descripcion">
+      <h1>Acerca de mi</h1>
+      <p>
+        {{ persona.descripcion }}
+      </p>
+    </div>
   </div>
 </div>

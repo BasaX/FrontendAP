@@ -1,6 +1,8 @@
-.row {
+.group {
   padding: 20px;
   background-color: #a1b5cb;
+  min-height: 600px;
+  align-items: flex-start;
 }
 
 .contenedor {
@@ -15,4 +17,35 @@
 
 .img-proyecto {
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.6);
+  width: 500px;
+  cursor: pointer;
+}
+
+.section {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+button {
+  height: 40px;
+}
+
+.container {
+  display: flex;
+  padding: 1rem;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.subContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.subTitle {
+  font-size: 18px;
 }

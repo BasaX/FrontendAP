@@ -1,3 +1,8 @@
+.group {
+  background-color: #a1b5cb;
+  background-image: none;
+}
+
 .container {
   display: flex;
   justify-content: space-between;

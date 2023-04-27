@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="row">
+    <div>
+      <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+        <div class="from-group">
+          <label for="nombre">Nombre del proyecto</label>
+          <input
+            type="text"
+            class="form-control"
+            id="nombre"
+            name="nombre"
+            placeholder="Ingrese nombre del proyecto"
+            [(ngModel)]="nombre"
+            required
+          />
+        </div>
+        <div class="from-group">
+          <label for="descripcion">Descripcion del proyecto</label>
+          <input
+            type="text"
+            class="form-control"
+            id="descripcion"
+            name="descripcion"
+            placeholder="Ingrese descripcion del proyecto"
+            [(ngModel)]="descripcion"
+            required
+          />
+        </div>
+        <div class="from-group">
+          <label for="url">Url del proyecto</label>
+          <input
+            type="text"
+            class="form-control"
+            id="url"
+            name="url"
+            placeholder="Ingrese url del proyecto"
+            [(ngModel)]="url"
+            required
+          />
+        </div>
+        <div class="from-group">
+          <label for="img">Imagen</label>
+          <input
+            type="file"
+            class="form-control"
+            id="img"
+            name="img"
+            placeholder="Ingrese la imagen"
+            [(ngModel)]="img"
+            (change)="uploadImage($event)"
+            accept=".jpg, .jpeg, .png"
+            required
+          />
+        </div>
+        <div class="imagen">
+          <img [src]="imageService.url" width="200px" />
+        </div>
+        <br />
+        <button class="btn btn-primary">Agregar proyecto</button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,39 +1,39 @@
-<div class="row">
-  <h1>Proyectos realizados</h1>
-  <div class="contenedor">
-    <div class="col-sm-12 col-md-7 col-lg-7 parte1">
-      <h2>Proyecto 1</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil
-        quibusdam illo quae ad! Laboriosam explicabo, numquam ipsa sed aperiam
-        rerum at pariatur eum sunt praesentium exercitationem saepe minima enim.
-        Perferendis!
-      </p>
-    </div>
-    <div class="col-sm-12 col-md-3 col-lg-3 offset-md-1 offset-lg-1 parte2">
-      <img
-        src="../../../assets/proyecto.jpg"
-        alt="proyecto1"
-        class="img-fluid img-proyecto"
-      />
-    </div>
+<div class="group">
+  <div class="section">
+    <h1>Proyectos</h1>
+    <button
+      type="button"
+      class="btn btn-dark"
+      routerLink="nuevoproy"
+      *ngIf="isLogged"
+    >
+      Nuevo proyecto
+    </button>
   </div>
-  <div class="contenedor">
-    <div class="col-sm-12 col-md-7 col-lg-7 parte1">
-      <h2>Proyecto 2</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil
-        quibusdam illo quae ad! Laboriosam explicabo, numquam ipsa sed aperiam
-        rerum at pariatur eum sunt praesentium exercitationem saepe minima enim.
-        Perferendis!
-      </p>
+
+  <div class="container" *ngFor="let proyecto of proyecto">
+    <div class="subContainer">
+      <h3>{{ proyecto.nombre }}</h3>
+      <div class="subTitle">{{ proyecto.descripcion }}</div>
     </div>
-    <div class="col-sm-12 col-md-3 col-lg-3 offset-md-1 offset-lg-1 parte2">
-      <img
-        src="../../../assets/proyecto.jpg"
-        alt="proyecto2"
-        class="img-fluid img-proyecto"
-      />
+    <div>
+      <a href="{{ proyecto.url }}" target="_blank">
+        <img
+          src="{{ proyecto.img }}"
+          alt="ImagenProyecto"
+          class="img-fluid img-proyecto"
+          id="ImagenProyecto"
+      /></a>
+      <td *ngIf="isLogged">
+        <button class="btn btn-light" routerLink="/editproy/{{ proyecto.id }}">
+          <i class="bi bi-pencil-square"></i>
+        </button>
+      </td>
+      <td *ngIf="isLogged">
+        <button class="btn btn-danger" (click)="delete(proyecto.id)">
+          <i class="bi bi-trash3"></i>
+        </button>
+      </td>
     </div>
   </div>
 </div>
