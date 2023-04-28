@@ -9,5 +9,6 @@ export const environment = {
     messagingSenderId: '407931037007',
   },
   production: true,
-  URL: 'https://backendbcd-basax.koyeb.app/',
+  URL: 'https://backendbcd.onrender.com',
+  //URL: 'https://backendbcd-basax.koyeb.app/',
 };
